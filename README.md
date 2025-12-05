@@ -27,7 +27,16 @@ I am currently studying **Software Engineering** and plan to pursue a career in 
 
 ## Screenshots
 
-<img width="1322" height="808" alt="image" src="https://github.com/user-attachments/assets/be18a763-ac48-4556-9f05-26caf7807774" />
+<img width="711" height="695" alt="image" src="https://github.com/user-attachments/assets/5d5e86d1-33ef-47b2-88d0-8a2dd5aaddb4" />
+
+
+<img width="702" height="853" alt="image" src="https://github.com/user-attachments/assets/dd83de55-4bce-47d5-aba7-83c5a82d0b2f" />
+
+<img width="718" height="706" alt="image" src="https://github.com/user-attachments/assets/989f3255-b671-455d-b775-e0b0cc228515" />
+
+<img width="654" height="906" alt="image" src="https://github.com/user-attachments/assets/73a8ad77-2919-4efd-a458-f6eec01c0ac0" />
+
+
 
 ## Future Goals
 
