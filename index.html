@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Study Calm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="nav-title">📘 Study Calm</div>
+    <nav>
+      <button onclick="goToPage('todo')" class="nav-btn">To-Do List</button>
+      <button onclick="goToPage('calendar')" class="nav-btn">Calendar</button>
+      <button onclick="goToPage('progress')" class="nav-btn">Progress Tracker</button>
+      <button onclick="goToPage('recommender')" class="nav-btn">Study Method</button>
+    </nav>
+  </header>
+
+  <div id="app">
+    <!-- Launch -->
+    <section id="launch-screen" class="screen active">
+      <h1>📘 Study Calm</h1>
+      <p>Plan your studies, calm your mind.</p>
+      <button onclick="goToPage('todo')">Get Started →</button>
+    </section>
+
+    <!-- To-Do List -->
+    <section id="todo-screen" class="screen">
+      <h2>📝 To-Do List</h2>
+      <form onsubmit="addTask(event)">
+        <input id="task-subject" placeholder="Subject (e.g., Math)" required />
+        <input id="task-title" placeholder="Task (e.g., Finish Algebra)" required />
+        <select id="task-priority">
+          <option value="none">No Priority</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <button>Add Task</button>
+      </form>
+      <div id="task-list"></div>
+      <div class="nav-buttons">
+        <button onclick="goToPage('calendar')">Calendar →</button>
+        <button onclick="goToPage('launch')">← Back</button>
+      </div>
+    </section>
+
+    <!-- Calendar -->
+    <section id="calendar-screen" class="screen">
+
+
+      <h2>📅 Calendar</h2>
+      <div id="calendar" class="calendar-grid"></div>
+      <form onsubmit="addSession(event)">
+        <input type="date" id="session-date" required />
+        <input type="text" id="session-subject" placeholder="Subject" required />
+        <input type="text" id="session-time" placeholder="Time (e.g. 10:00 - 11:00)" required />
+        <button type="submit">Add Session</button>
+      </form>
+      <div id="calendar-sessions"></div>
+      <div class="nav-buttons">
+        <button onclick="goToPage('progress')">Progress →</button>
+        <button onclick="goToPage('todo')">← Back</button>
+      </div>
+    </section>
+
+    <!-- Progress Tracker -->
+    <section id="progress-screen" class="screen">
+      <h2>📊 Progress Tracker</h2>
+      <div class="card">
+        <h3>Overall Study Progress</h3>
+        <div class="progress-circle" id="progress-circle">0%</div>
+        <p id="progress-msg">Start by completing some tasks!</p>
+      </div>
+      <div id="subject-progress" class="card"></div>
+      <div class="nav-buttons">
+        <button onclick="goToPage('recommender')">Recommendations →</button>
+        <button onclick="goToPage('calendar')">← Back</button>
+      </div>
+    </section>
+
+    <!-- Study Method Recommender -->
+<section id="recommender-screen" class="screen">
+  <h2>📚 Personalized Study Recommendations</h2>
+
+  <div class="card">
+    <form id="recommender-form">
+      <!-- Learning Style -->
+      <label for="learning-style">Primary Learning Style:</label>
+      <select id="learning-style" required>
+        <option value="">Select your style</option>
+        <option value="visual">Visual</option>
+        <option value="auditory">Auditory</option>
+        <option value="kinesthetic">Kinesthetic</option>
+        <option value="mixed">Mixed</option>
+      </select>
+
+      <!-- Study Environment -->
+      <label for="study-environment">Ideal Study Environment:</label>
+      <input type="text" id="study-environment" placeholder="e.g. Quiet Library" required />
+
+      <!-- Study Duration -->
+      <label for="study-duration">Typical Study Duration (minutes):</label>
+      <input type="number" id="study-duration" min="10" max="180" step="5" value="30" />
+
+      <!-- Study Habits -->
+      <fieldset>
+        <legend>Study Habits:</legend>
+        <label><input type="checkbox" id="take-notes" /> Take detailed notes</label>
+        <label><input type="checkbox" id="study-groups" /> Study in groups</label>
+        <label><input type="checkbox" id="take-breaks" /> Take regular breaks</label>
+        <label><input type="checkbox" id="active-review" /> Use active recall (quizzes, flashcards)</label>
+        <label><input type="checkbox" id="time-blocking" /> Use time-blocking / schedule sessions</label>
+        <label><input type="checkbox" id="motivation-tips" /> Receive motivation tips</label>
+      </fieldset>
+
+      <!-- Submit Button -->
+      <button type="submit">Get Recommendations</button>
+    </form>
+  </div>
+
+  <!-- Recommendations Output -->
+  <div class="card" id="recommendation-output"></div>
+
+  <!-- Navigation -->
+  <div class="nav-buttons">
+    <button onclick="goToPage('launch')">← Back to Start</button>
+  </div>
+</section>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
