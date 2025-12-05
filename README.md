@@ -32,7 +32,9 @@ I am currently studying **Software Engineering** and plan to pursue a career in 
 
 <img width="702" height="853" alt="image" src="https://github.com/user-attachments/assets/dd83de55-4bce-47d5-aba7-83c5a82d0b2f" />
 
+
 <img width="718" height="706" alt="image" src="https://github.com/user-attachments/assets/989f3255-b671-455d-b775-e0b0cc228515" />
+
 
 <img width="654" height="906" alt="image" src="https://github.com/user-attachments/assets/73a8ad77-2919-4efd-a458-f6eec01c0ac0" />
 
